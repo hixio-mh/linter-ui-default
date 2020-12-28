@@ -63,7 +63,10 @@
   },
   "targets": {
     "main": {
-      "context": "node",
+      "context": "electron-renderer",
+      "engines": {
+        "electron": ">=12.x"
+      },
       "includeNodeModules": {
         "atom": false,
         "electron": false,
