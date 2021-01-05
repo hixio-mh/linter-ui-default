@@ -32,9 +32,12 @@ export default function MessageElement(props: Props) {
 
   function onFixClick(): void {
     const message = props.message
+    const messageSolutions = message.solutions
     const textEditor = getActiveTextEditor()
-    if (textEditor !== null && message.version === 2 && message.solutions && message.solutions.length) {
-      applySolution(textEditor, sortSolutions(message.solutions)[0])
+    if (textEditor !== null && message.version === 2) {
+      if (Array.isArray(messageSolutions) && messageSolutions.length !== 0) {
+        applySolution(textEditor, sortSolutions(messageSolutions)[0])
+      }
     }
   }
 
