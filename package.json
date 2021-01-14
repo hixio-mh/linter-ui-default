@@ -35,31 +35,31 @@
     "disposable-event": "^1.1.0",
     "lodash": "^4.17.20",
     "marked": "^1.2.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sb-react-table": "^1.0.2"
+    "solid-js": "^0.23.10",
+    "solid-simple-table": "^0.1.2"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.12.7",
-    "babel-preset-solid": "^0.23.4",
     "@types/atom": "^1.40.5",
     "@types/chance": "^1.1.1",
     "@types/jasmine": "^3.6.2",
     "@types/lodash": "^4.14.165",
     "@types/marked": "^1.2.1",
     "@types/node": "^14.14.14",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
     "atom-ide-base": "^2.1.1",
+    "babel-preset-atomic": "^3.0.1",
+    "babel-preset-solid": "^0.23.8",
     "build-commit": "0.1.1",
     "chance": "^1.1.7",
     "cross-env": "^7.0.3",
     "eslint": "^7.16.0",
     "eslint-config-atomic": "^1.5.1",
     "jasmine-fix": "^1.3.1",
-    "parcel": "^2.0.0-nightly.486",
+    "parcel": "2.0.0-nightly.520",
+    "postcss-modules": "^4.0.0",
     "prettier": "^2",
     "shx": "^0.3.3",
+    "solid-scripts": "0.0.50",
     "typescript": "^4"
   },
   "targets": {
@@ -68,13 +68,14 @@
       "includeNodeModules": {
         "atom": false,
         "electron": false,
-        "react": false,
-        "react-dom": false,
         "atom-package-deps": false
       },
       "outputFormat": "commonjs",
       "isLibrary": true
     }
+  },
+  "alias": {
+    "solid-simple-table": "solid-simple-table/dist/SimpleTable.module"
   },
   "providedServices": {
     "linter-ui": {
